@@ -85,20 +85,22 @@
             <p>We aren’t registered anywhere, but we would love it if you donated to any of our favorite non-profits:</p>
             
             <h3>For the environment</h3>
-            <p>Nature Consortium Seattle, WA. Nature Consortium is a grassroots, community-based organization whose mission is to connect people, arts and nature. They produce a Youth Art Program, an Urban Forest Restoration Program and the Arts in Nature Festival. Donate Here</p>
+            <p><a href="http://www.naturec.org">Nature Consortium</a> is a grassroots, community-based organization whose mission is to connect people, arts and nature. They produce a Youth Art Program, an Urban Forest Restoration Program and the Arts in Nature Festival. <a href="http://www.naturec.org/donate/">Donate Here</a></p>
             
             <h3>For animals</h3>
-            <p>Pigs Peace Sanctuary Stanwood, WA. Pigs Peace Sanctuary is a facility helping animals and educating people since 1994. They are specialized in pigs but also have welcomed other animals in need and are currently home to ponies, horses, llamas, dogs, cats, chickens, sheep and turkeys. 100% of donations go for the care of the animals who call the sanctuary home. Donation Form Here</p>
+            <p><a href="http://www.pigspeace.org/main/index.html">Pigs Peace Sanctuary</a> is a facility helping animals and educating people since 1994. They are specialized in pigs but also have welcomed other animals in need and are currently home to ponies, horses, llamas, dogs, cats, chickens, sheep and turkeys. 100% of donations go for the care of the animals who call the sanctuary home. <a href="http://www.pigspeace.org/main/donate_form.html">Donation Form Here</a></p>
             
             <h3>For community</h3>
-            <p>TBD</p>
+            <p><a href="">TBD nonprofit</a> TBD <a href="">Donation Form Here</a></p>
             
             <h3>Honeymoon fund</h3>
             <p>You can also just mail us a check that will go towards our honeymoon fund!</p>
             <!-- TODO: donation links -->
         </div>
         <div class="tab-pane" id="qa">
-            <p>nothing here yet</p>
+            <h3>Q: Why are you two getting married?</h3>
+            <h3>A:</h3>
+            <div id="vid-container"></div>
         </div>
       </div>
 
@@ -120,6 +122,9 @@
             }
             else if (newHash === '#home') {
                 $('a[data-toggle="tab"]').parent('.active').removeClass('active');
+            }
+            else if (newHash === '#qa') {
+                $('#vid-container').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/cYdsWtku9gg" frameborder="0" allowfullscreen></iframe>');
             }
         }
         
