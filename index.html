@@ -114,7 +114,7 @@
 
         function updateHash(newHash) {
             window.location.hash = newHash;
-            $('html,body').scrollTop(scrollmem);
+            window.scrollTo(0,0);
             if (newHash === '#location') {
                 $('#map-container').html('<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43022.67712042109!2d-122.32520742871091!3d47.6277384245294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ad07204b5c1%3A0xf49011c7f60c6c82!2s945+20th+Ave!5e0!3m2!1sen!2sus!4v1392011901542" width="600" height="450" frameborder="0" style="border:0"></iframe>');
             }
