@@ -29,61 +29,103 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
+            <!-- TODO: update url for each section, auto-collapse nav on click -->
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Cody &hearts; Allison</a>
+          <a class="navbar-brand" href="#home" data-toggle="tab">Cody &hearts; Allison</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top</a></li>
+            <li><a href="#location" data-toggle="tab">Location</a></li>
+            <li><a href="#lodging" data-toggle="tab">Lodging</a></li>
+            <li><a href="#registry" data-toggle="tab">Charity Registry</a></li>
+            <li><a href="#qa" data-toggle="tab">Q&amp;A</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
     <div class="container">
+      
+      <div class="tab-content">
+        <div class="tab-pane active" id="home">
+            <div class="jumbotron">
+              <h1>Save the Date</h1>
+              <h2>for Allison &amp; Cody’s wedding</h2>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Cody &hearts; Allison</h1>
-        <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
-        <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-        <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">RSVP &raquo;</a>
-        </p>
+              <p>July 26, 2014</p>
+
+              <p>945 20th Ave<br />
+              Seattle, WA 98122</p>
+            </div>
+        </div>
+        <div class="tab-pane" id="location">
+            <h1>Parking</h1>
+            <p>We have street parking, but we live on a small narrow street and parking can get crowded so we recommend taking public transportation (see below) or a taxi/Uber/Lyft/etc.</p>
+            <h1>Public Transportation</h1>
+            <p>We live right along the #2 bus line, just a couple blocks from the 3, 4, and 48 bus lines, and a slightly longer, but pleasant walk from the 10, 11, and 12 bus lines.</p>
+            <div id="map-container"></div>
+        </div>
+        <div class="tab-pane" id="lodging">
+            <h1>Hotels</h1>
+            <p>These hotels are close to us. If you want to explore more of Seattle please research hotels in other neighborhoods, and feel free to ask us for any advice on transportation/activities, etc.</p>
+            <ul>
+                <li><b>First Hill</b>: The <a href="http://www.hotelsorrento.com">Sorrento Hotel</a> is a beautiful historic hotel with ornate architecture and a lovely cocktail service in the lobby area. Walking distance to downtown.</li>
+                <li><b>Capitol Hill</b>: The <a href="http://www.silvercloud.com/seattlebroadway/">Silver Cloud Hotel on Broadway</a> is right along Broadway at the south end of Seattle’s lively gay neighborhood with plentiful restaurants and nightlife.</li>
+                <li><b>Downtown</b>: <a href="http://www.hotelmaxseattle.com/">Hotel Max</a> is steps from Pike Place Market and Capitol Hill, and in the middle of all the music action. Additionally, any of the major national hotel chains are available downtown, and are a short bus or taxi ride from our home.</li>
+            </ul>
+            <!-- TODO: make link text darker -->
+        </div>
+        <div class="tab-pane" id="registry">
+            <h1>Registry</h1>
+            <p>We aren’t registered anywhere, but we would love it if you donated to any of our favorite non-profits:</p>
+            
+            <h3>For the environment</h3>
+            <p>Nature Consortium Seattle, WA. Nature Consortium is a grassroots, community-based organization whose mission is to connect people, arts and nature. They produce a Youth Art Program, an Urban Forest Restoration Program and the Arts in Nature Festival. Donate Here</p>
+            
+            <h3>For animals</h3>
+            <p>Pigs Peace Sanctuary Stanwood, WA. Pigs Peace Sanctuary is a facility helping animals and educating people since 1994. They are specialized in pigs but also have welcomed other animals in need and are currently home to ponies, horses, llamas, dogs, cats, chickens, sheep and turkeys. 100% of donations go for the care of the animals who call the sanctuary home. Donation Form Here</p>
+            
+            <h3>For community</h3>
+            <p>TBD</p>
+            
+            <h3>Honeymoon fund</h3>
+            <p>You can also just mail us a check that will go towards our honeymoon fund!</p>
+            <!-- TODO: donation links -->
+        </div>
+        <div class="tab-pane" id="qa">
+            <p>nothing here yet</p>
+        </div>
       </div>
 
     </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script>
+        var hash = window.location.hash;
+        hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+        $('.nav-tabs a').click(function (e) {
+          $(this).tab('show');
+          var scrollmem = $('body').scrollTop();
+          window.location.hash = this.hash;
+          $('html,body').scrollTop(scrollmem);
+        });
+        
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+            window.location.hash = e.target.hash;
+            if (e.target.hash === '#location') {
+                $('#map-container').html('<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43022.67712042109!2d-122.32520742871091!3d47.6277384245294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ad07204b5c1%3A0xf49011c7f60c6c82!2s945+20th+Ave!5e0!3m2!1sen!2sus!4v1392011901542" width="600" height="450" frameborder="0" style="border:0"></iframe>');
+            }
+            if (e.target.hash === '#home') {
+                $('a[data-toggle="tab"]').parent('.active').removeClass('active');
+            }
+        });
+    </script>
   </body>
 </html>
