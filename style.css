@@ -11,6 +11,24 @@ body {
   background-color: white;
 }
 
+.heart {
+    color: red;
+}
+
+#home h1, h2 {
+  font-family: 'Miss Fajardose', cursive;
+  font-weight: bold;
+}
+
+#home h1 {
+    font-size: 64px;
+}
+
+#home h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
 .tab-pane {
   padding: 0 20px 20px 20px;
 }
