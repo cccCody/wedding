@@ -150,7 +150,7 @@
                 <p>We have street parking, but we live on a small narrow street and parking can get crowded so we recommend taking public transportation (see below) or a taxi/Uber/Lyft/etc.</p>
                 <h1>Public Transportation</h1>
                 <p>We live right along the #2 bus line, just a couple blocks from the 48, and a slightly longer but pleasant walk from the 3, 4, 10, 11, and 12 bus lines. Use the map below to get driving or public transit direcitons.</p>
-                <div id="map-container"></div>
+                <div id="home-map" class="iframe-container map-container"></div>
             </div>
             <div class="tab-pane" id="lodging">
                 <h1>Hotels</h1>
@@ -181,7 +181,7 @@
             </div>
             <div class="tab-pane" id="qa">
                 <h3>Why are you two getting married?</h3>
-                <div id="vid-container"></div>
+                <div id="aziz-video" class="iframe-container video-container"></div>
                 <div class="row" id="footer">
                   <div class="container">
                 <h4>Additional questions?</h4>
@@ -203,28 +203,31 @@
         hash && $('ul.nav a[href="' + hash + '"]').tab('show');
         
         var mapLoaded = false;
-        var youtubeLoaded = false;
+        var azizYoutubeLoaded = false;
         
         var navToggle = $('.navbar-toggle');
+        var navCollapse = $('.navbar-collapse');
 
         function updateHash(newHash) {
             window.location.hash = newHash;
-            window.scrollTo(0,0);
+            
             if (!mapLoaded && newHash === '#location') {
-                $('#map-container').html('<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43022.67712042109!2d-122.32520742871091!3d47.6277384245294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ad07204b5c1%3A0xf49011c7f60c6c82!2s945+20th+Ave!5e0!3m2!1sen!2sus!4v1392011901542" width="600" height="450" frameborder="0" style="border:0"></iframe>');
+                $('#home-map').html('<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43022.67712042109!2d-122.32520742871091!3d47.6277384245294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ad07204b5c1%3A0xf49011c7f60c6c82!2s945+20th+Ave!5e0!3m2!1sen!2sus!4v1392011901542" width="600" height="450" frameborder="0" style="border:0"></iframe>');
                 mapLoaded = true;
             }
             else if (newHash === '#home') {
                 $('a[data-toggle="tab"]').parent('.active').removeClass('active');
             }
-            else if (!youtubeLoaded && newHash === '#qa') {
-                $('#vid-container').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/cYdsWtku9gg" frameborder="0" allowfullscreen></iframe>');
-                youtubeLoaded = true;
+            else if (!azizYoutubeLoaded && newHash === '#qa') {
+                $('#aziz-video').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/cYdsWtku9gg" frameborder="0" allowfullscreen></iframe>');
+                azizYoutubeLoaded = true;
             }
             
-            if (!navToggle.hasClass('collapsed') && navToggle.is(':visible')) {
+            if (navCollapse.hasClass('in') && navToggle.is(':visible')) {
                 navToggle.click();
             }
+            
+            window.scrollTo(0,0);
         }
         
         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
