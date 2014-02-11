@@ -37,6 +37,10 @@ body {
     margin-bottom: 20px;
 }
 
+#home h3, .text-muted, .carousel-indicators {
+    margin-bottom: 0px;
+}
+
 .tab-pane {
   padding: 0 20px 20px 20px;
 }
