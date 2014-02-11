@@ -15,6 +15,10 @@ body {
     color: red;
 }
 
+.carousel-inner > .item > img { margin: 0 auto;
+
+}
+
 #home h1, h2 {
   font-family: 'Miss Fajardose', cursive;
   font-weight: bold;
