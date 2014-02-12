@@ -41,6 +41,7 @@
             <li><a href="#lodging" data-toggle="tab">Lodging</a></li>
             <li><a href="#registry" data-toggle="tab">Charity Registry</a></li>
             <li><a href="#qa" data-toggle="tab">Q&amp;A</a></li>
+            <li><a href="#rsvp" data-toggle="tab">RSVP</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -50,12 +51,14 @@
         <div class="col-md-12">
           <div class="tab-content">
             <div class="tab-pane active" id="home">
-                  <h1 class="text-center">Save the Date</h1>
-                  <h2 class="text-center">for Allison &amp; Cody’s wedding</h2>
+                <div class="text-center">
+                  <h1>Save the Date</h1>
+                  <h2>for Allison &amp; Cody’s wedding</h2>
 
-                  <p class="text-center">July 26, 2014, 3:00 PM</p>
-                  <p class="text-center">In our home<p>
-                  <p class="text-center">945 20th Ave<br />Seattle, WA 98122</p>
+                  <p>July 26, 2014, 3:00 PM</p>
+                  <p>In our home<p>
+                  <p>945 20th Ave<br />Seattle, WA 98122</p>
+                </div>
             
                   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -193,6 +196,7 @@
                   <p class="text-muted">Background image by <a href="http://www.colourlovers.com/lover/Skyblue2u/loveNote">Skyblue2u</a> &amp; <a href="http://www.colourlovers.com/lover/yoksel/loveNote">yoksel</a>.</p>
                 </div>
             </div>
+            <div class="tab-pane iframe-container doc-container" id="rsvp"></div>
           </div>
         </div>
       </div>
@@ -206,6 +210,7 @@
         
         var mapLoaded = false;
         var azizYoutubeLoaded = false;
+        var rsvpLoaded = false;
         
         var navToggle = $('.navbar-toggle');
         var navCollapse = $('.navbar-collapse');
@@ -223,6 +228,9 @@
             else if (!azizYoutubeLoaded && newHash === '#qa') {
                 $('#aziz-video').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/cYdsWtku9gg" frameborder="0" allowfullscreen></iframe>');
                 azizYoutubeLoaded = true;
+            }
+            else if (!rsvpLoaded && newHash === "#rsvp") {
+                $('#rsvp').html('<iframe src="https://docs.google.com/forms/d/1m-MrvRcv4H8lVFkCe2Zjb8uHdETBLJtZuXHCXp60ToU/viewform?embedded=true" width="695" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>');
             }
             
             if (navCollapse.hasClass('in') && navToggle.is(':visible')) {

@@ -55,6 +55,10 @@ body {
   padding-bottom: 75%;
 }
 
+.doc-container {
+  padding-bottom: 100%;
+}
+
 .video-container {
   padding-bottom: 56.25%;
 }
