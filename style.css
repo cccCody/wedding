@@ -54,6 +54,10 @@ body {
     color: white;
 }
 
+.strike {
+    text-decoration: line-through;
+}
+
 .iframe-container {
     position: relative;
     height: 0;
